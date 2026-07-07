@@ -81,6 +81,7 @@ class DeepseekV32DecoderLayer(torch.nn.Module):
                 quant_config=quant_config,
                 reduce_results=False,
                 prefix=f"{prefix}.mlp",
+                apply_routed_scale_to_output=False,
             )
         else:
             self.mlp = DeepseekV2MLP(
